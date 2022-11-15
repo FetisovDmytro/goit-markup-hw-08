@@ -5,10 +5,22 @@
     color: var(--logo-text);
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
+
+
+    @media screen and (min-width: 1200px) {
+    
+          font-size: 26px;
+          line-height: 1.19;
+    
+      }
+       
 }
+
+
+
 
 .page-header {
     border: 1px solid #ECECEC;
@@ -17,6 +29,7 @@
 .page-header__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-menu {
@@ -25,8 +38,26 @@
 }
 
 .nav-menu__list {
-    display: flex;
+    display: none;
     margin-left: 93px;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+}
+
+.mobile-menu-open {
+    
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    @media screen and (min-width:768px){
+    
+     display: none;      
+        
+    }
 }
 
 
@@ -37,8 +68,6 @@
     &:nth-child(3) {
         margin-right: 0%;
     }
-    
-
 }
 
 /* Навігація */
@@ -79,20 +108,38 @@
 
 /* Контакти */
 .contakts-list  {
-  display: flex;
+  display: none;
   margin-left: auto;
+  align-items: center;
+  
+  @media screen and (min-width:768px)  {
+    display:block;
 }
 
-.contakts-list__item + .contakts-list__item {
-    margin-left: 50px;
+  @media screen and (min-width:1200px) {
+    display: flex;
+    
+    .contakts-list__item + .contakts-list__item {
+        margin-left: 50px;
+    }
 }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contacts-list__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+
 
 
 .contakts-list__link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     color: var(--text-color);
     transition: color var(--transition-dur-n-fuc);
     font-weight: 500;
@@ -115,6 +162,4 @@
      
  }
  
-//  .contacts-list__svg {
-//      fill: currentColor;
-//     }
+

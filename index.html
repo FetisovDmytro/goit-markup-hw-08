@@ -21,6 +21,11 @@
                             <li class="nav-menu__item"><a href="#" class="nav-menu__link link">Контакти</a></li>
                         </ul>
                  </nav>
+                 <button type="button" class="mobile-menu-open" data-menu-open>
+                    <svg class="mobile-menu-open__icon" width="40" height="40">
+                      <use href="./images/symbol-defs2.svg#icon-burger_menu"></use>
+                    </svg>
+                  </button>
                     <ul class="contakts-list list">
                         <li class="contakts-list__item"><a href="mailto:info@devstudio.com" lang="en" class="contakts-list__link link">
                             <svg class="contacts-list__svg" width="16" height="12" >
@@ -84,19 +89,19 @@
                     <ul class=" work-list list">
                         <li class="work-list__item">
                             <div class="work-list__img__pozition">
-                                <img src="./images/maketu1.jpg" alt="Зразок роботи 1" width="370">
+                                <img src="./images/skill/dt-skill1.jpg" alt="Зразок роботи 1" width="370">
                                 <p class="work-list__overlay">Десктопні додатки</p>
                             </div>
                         </li>
                         <li class="work-list__item">
                             <div class="work-list__img__pozition">
-                                <img src="./images/maketu3.jpg" alt="Зразок роботи 2" width="370">
+                                <img src="./images/skill/dt-skill2.jpg" alt="Зразок роботи 2" width="370">
                                 <p class="work-list__overlay">Мобільні додатки</p>
                             </div>
                         </li>
                         <li class="work-list__item">
                             <div class="work-list__img__pozition">
-                                <img src="./images/maketu2.jpg" alt="Зразок роботи 3" width="370">
+                                <img src="./images/skill/dt-skill3.jpg" alt="Зразок роботи 3" width="370">
                                 <p class="work-list__overlay">Дизайнерські рішення</p>
                             </div>
                         </li>
@@ -111,7 +116,7 @@
                     <ul class="employes-list list">
                         
                             <li class="employes-list__item">
-                                <img src="./images/namejobs1.jpg" alt="Ігор Дем'яненко" width="270">
+                                <img src="./images/employes/desctop-img/dt-igor.jpg" alt="Ігор Дем'яненко" width="270">
                                 <div class="employes-list__card">
                                     <h3 class="employes-list__title">Ігор Дем'яненко</h3>
                                     <p class="employes-list__text">Product Designer</p>
@@ -151,7 +156,7 @@
                             </li>
                        
                             <li class="employes-list__item">
-                                <img src="./images/namejobs2.jpg" alt="Ольга Рєпіна" width="270">
+                                <img src="./images/employes/desctop-img/dt-olga.jpg" alt="Ольга Рєпіна" width="270">
                                 <div class="employes-list__card">
                                     <h3 class="employes-list__title">Ольга Рєпіна</h3>
                                      <p class="employes-list__text">Frontend Developer</p>
@@ -190,7 +195,7 @@
                             </li>
                       
                             <li class="employes-list__item">
-                                <img src="./images/namejobs3.jpg" alt="Микола Тарасов" width="270">
+                                <img src="./images/employes/desctop-img/dt-mykola.jpg" alt="Микола Тарасов" width="270">
                                 <div class="employes-list__card">
                                     <h3 class="employes-list__title">Микола Тарасов</h3>
                                     <p class="employes-list__text">Marketing</p> 
@@ -229,7 +234,7 @@
                             </li>
 
                             <li class="employes-list__item">
-                                <img src="./images/namejobs4.jpg" alt="Михайло Єрмаков" width="270">
+                                <img src="./images/employes/desctop-img/dt-misha.jpg" alt="Михайло Єрмаков" width="270">
                                 <div class="employes-list__card">
                                     <h3 class="employes-list__title">Михайло Єрмаков</h3>
                                     <p class="employes-list__text">UI Designer</p>
@@ -403,6 +408,51 @@
   
 </footer>
 
+<!-- Мобільне меню  -->
+
+<div class="mobile-menu" data-menu>
+    <div class="container mobile-menu__container">
+        <button class="mobile-menu__close-button" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/symbol-defs2.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="mobile-nav list">
+            <li class="mobile-nav__item"><a href="./index.html" class="mobile-nav__link link mobile-nav__link_current">Студія</a></li>
+             <li class="mobile-nav__item"><a href="./portfilio.html" class="mobile-nav__link link link">Портфоліо</a></li>
+             <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link link">Контакти</a></li>
+        </ul>
+        <div class="mobile-footer">
+            <ul class="mobile-contacts list">
+              <li class="mobile-contacts__item">
+                <a class="mobile-contacts__phone link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <a class="mobile-contacts__mail link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="social-links list">
+              <li class="social-links__item">
+                <a class="social-links__link link" href="">Instagram</a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link link" href="">Twitter</a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link link" href="">Facebook</a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+    </div>
+</div>
+
 
 <!-- Бекдроп -->
 <div class="backdrop is-hidden" data-modal>
@@ -452,7 +502,11 @@
     </div>
 </div>
 
+
+
+
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 
 </body>
 
