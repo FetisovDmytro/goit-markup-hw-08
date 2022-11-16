@@ -1,9 +1,36 @@
 /* Наша команда  */
 
-.employes-list {
-    display: flex;
-    justify-content: space-between;
-}
+// .employes-list {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .employes-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .employes-list__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .employes-list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .employes-list__item:not(:last-child) {
+      margin-bottom: 30px;
+      max-width: 450px;
+    }
+  }
 
 .bgc-team {
     background-color:var(--bgc-comands);

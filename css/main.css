@@ -307,7 +307,6 @@ img {
 }
 
 .list {
-  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -473,38 +472,108 @@ img {
   fill: var(--text-color);
 }
 
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: var(--white-bgc);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity var(--transition-dur-n-fuc), visibility var(--transition-dur-n-fuc);
+}
+
+.mobile-menu__close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+.mobile-menu__close-button:hover, .mobile-menu__close-button:focus {
+  color: var(--Blue-color);
+  background-color: var(--white-bgc);
+}
+
 /* Герой */
 .hero {
   text-align: center;
   background-color: var(--bgc-hero-title);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
-  height: 600px;
+  min-height: 600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgchero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile-img/mb-hero.jpg);
   background-color: #C4C4C4;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile-img/mb-hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tab-img/tb-hero.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tab-img/tb-hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/desctop-img/dt-hero.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/desctop-img/dt-hero@2x.jpg);
+  }
+}
 .hero__title {
-  width: 696px;
-  margin-top: 0;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--white-bgc);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--white-bgc);
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
 /* Головна кнопка */
 .hero__btn {
   border: 1px solid transparent;
@@ -526,14 +595,32 @@ img {
   color: var(--white-bgc);
 }
 
-/* Переваги */
-.features-list__item {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .features-list__item {
+    max-width: 450px;
+  }
+  .features-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-.features-list__item:last-child {
-  margin-right: 0%;
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    max-width: 354px;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    margin-right: 30px;
+  }
+  .features-list__item:last-child {
+    margin-right: 0%;
+  }
+}
 .features__thumb {
   margin-bottom: 30px;
 }
@@ -584,6 +671,30 @@ img {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .features__title {
+    text-align: left;
+  }
+  .features-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .section__no-visible {
+    display: none;
+  }
+}
 .work-list {
   display: flex;
   justify-content: space-between;
@@ -614,11 +725,28 @@ img {
 }
 
 /* Наша команда  */
-.employes-list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .employes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .employes-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .employes-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .employes-list__item:not(:last-child) {
+    margin-bottom: 30px;
+    max-width: 450px;
+  }
+}
 .bgc-team {
   background-color: var(--bgc-comands);
 }
@@ -1009,39 +1137,6 @@ img {
 }
 .modal-form__submit:focus, .modal-form__submit:hover {
   background-color: var(--bgc-btn-act);
-}
-
-.mobile-menu {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: var(--white-bgc);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity var(--transition-dur-n-fuc), visibility var(--transition-dur-n-fuc);
-}
-
-.mobile-menu__close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
-}
-.mobile-menu__close-button:hover, .mobile-menu__close-button:focus {
-  color: var(--Blue-color);
-  background-color: var(--white-bgc);
 }
 
 /* Флекс для футера */
