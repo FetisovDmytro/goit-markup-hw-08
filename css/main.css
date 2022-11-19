@@ -515,7 +515,7 @@ img {
   min-height: 600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile-img/mb-hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile-img/mb-hero.jpg);
   background-color: #C4C4C4;
   background-position: center;
   background-repeat: no-repeat;
@@ -524,29 +524,29 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile-img/mb-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile-img/mb-hero@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tab-img/tb-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tab-img/tb-hero.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tab-img/tb-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tab-img/tb-hero@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/desctop-img/dt-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desctop-img/dt-hero.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/desctop-img/dt-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desctop-img/dt-hero@2x.jpg);
   }
 }
 .hero__title {
@@ -824,15 +824,40 @@ img {
   transition: fill var(--transition-dur-n-fuc);
 }
 
-/* Секція кліенти */
+@media screen and (min-width: 320px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .clients-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .clients-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
 .clients-list {
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
 
 .clients-list__link {
-  width: 170px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -1141,9 +1166,6 @@ img {
 
 /* Флекс для футера */
 .footer {
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bgc-hero-title);
@@ -1151,14 +1173,38 @@ img {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    align-items: baseline;
+  }
+}
+.footer-contacts-wrapper {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-contacts-wrapper {
+    margin-bottom: 60px;
+  }
+}
 .adress__list {
-  margin-right: 70px;
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+@media screen and (min-width: 1200px) {
+  .adress__list {
+    margin-right: 70px;
+  }
 }
 
 .footer-logo {
@@ -1201,6 +1247,16 @@ img {
   color: var(--Blue-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-social-container {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-social-container {
+    margin-left: 70px;
+  }
+}
 .footer-social-container__text {
   margin-top: 0;
   margin-bottom: 20px;
@@ -1212,6 +1268,10 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-bgc);
+}
+
+.footer-social-container__list {
+  display: flex;
 }
 
 .footer-social-container__item {
@@ -1246,10 +1306,21 @@ img {
 /* Форма в футері */
 .footer-form {
   display: flex;
-  align-items: flex-end;
-  margin-left: 93px;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-form {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    align-items: flex-end;
+    margin-left: 93px;
+  }
+}
 .footer-form__text {
   display: block;
   margin-bottom: 20px;
@@ -1277,6 +1348,21 @@ img {
   border-color: var(--Blue-color);
 }
 
+@media screen and (min-width: 480px) {
+  .footer-form__input {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-form__input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    width: 358px;
+  }
+}
 /* Кнопка в футері */
 .footer-form__btn {
   position: relative;
@@ -1308,4 +1394,10 @@ img {
   height: 24px;
   background-image: url(../images/icon-send.svg);
   fill: var(--white-bgc);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__btn {
+    margin-left: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,7 @@
 /* Флекс для футера */
 
 
-.footer {
-       
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
+.footer { 
     
     padding-top: 60px;
     padding-bottom: 60px;
@@ -13,16 +9,45 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    display: flex;   
 }
 
-    .adress__list {
-        margin-right: 70px;
+@media screen and (max-width: 1199px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    align-items: baseline;
+  }
+}
+
+.footer-contacts-wrapper {
+
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-contacts-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
+
+.adress__list {
+        
         display: flex;
         flex-direction: column;
         gap:9px;
-    }
+
+        @media screen and (min-width:1200px) {
+          margin-right: 70px;
+        }
+   }
     
 
 
@@ -42,6 +67,8 @@
 .address {
     font-style: normal;
 }
+
+
 
 .address__link {
     padding-bottom: 9px;
@@ -73,7 +100,17 @@
 } 
 
 
+@media screen and (max-width: 1199px) {
+  .footer-social-container {
+    margin-bottom: 60px;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+  .footer-social-container {
+    margin-left: 70px;
+  }
+}
 
 
 .footer-social-container__text {
@@ -87,6 +124,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color:var(--white-bgc);
+}
+
+.footer-social-container__list {
+  display: flex;
 }
 
 .footer-social-container__item {
@@ -136,8 +177,21 @@
 
   .footer-form {
     display: flex;
-    align-items: flex-end;
-    margin-left: 93px;
+  }
+  
+  @media screen and (max-width: 1199px) {
+    .footer-form {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .footer-form {
+      align-items: flex-end;
+      margin-left: 93px;
+    }
   }
 
   .footer-form__text {
@@ -169,6 +223,23 @@
 
     }
 
+    @media screen and (min-width: 480px) {
+      .footer-form__input {
+        width: 450px;
+      }
+    }
+    
+    @media screen and (max-width: 1199px) {
+      .footer-form__input {
+        margin-bottom: 20px;
+      }
+    }
+    
+    @media screen and (min-width: 1200px) {
+      .footer-form__input {
+        width: 358px;
+      }
+    }
  
 
   /* Кнопка в футері */
@@ -208,6 +279,12 @@
 
   }
 
+
+  @media screen and (min-width: 1200px) {
+    .footer-form__btn {
+      margin-left: 12px;
+    }
+  }
  
 
  
