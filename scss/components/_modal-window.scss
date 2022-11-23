@@ -17,9 +17,22 @@
     left: 50%;
     padding: 40px;
     transform:translate(-50%, -50% );
-    width: 528px;
-    height: 581px;
+    width: 320px;
+    
     background-color:var(--white-bgc);
+}
+
+
+@media screen and (min-width: 480px) {
+  .modal-window {
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    min-width: 528px;
+  }
 }
 
 
@@ -147,9 +160,9 @@
     justify-content: center;
     margin-bottom: 30px;
 
-    font-size: 14px;
-    line-height: 1.71;
-    /* identical to box height, or 171% */
+    font-size: 12px;
+    line-height: 1.16;
+   
 
     letter-spacing: 0.03em;
 
@@ -174,6 +187,14 @@
     margin-right: 10px;
     width: 16px;
     height: 15px;
+  }
+
+
+  @media screen and (min-width: 1200px) {
+    .modal-form__check-desc {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
 
