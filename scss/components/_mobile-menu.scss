@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     background-color: var(--white-bgc);
+    transition: opacity var(--transition-dur-n-fuc), visibility var(--transition-dur-n-fuc);
   
     opacity: 0;
     visibility: hidden;
@@ -16,7 +17,7 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transition: opacity var(--transition-dur-n-fuc), visibility var(--transition-dur-n-fuc);
+       
       }
 
   }
